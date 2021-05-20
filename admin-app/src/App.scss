@@ -1,0 +1,124 @@
+// https://react-bootstrap.netlify.app/getting-started/introduction/#customize-bootstrap
+$theme-colors: (
+  'primary': #47b581,
+);
+ol,
+ul,
+dl {
+  margin-bottom: 0 !important;
+}
+.btn-link:focus,
+.btn-link.focus,
+.btn-link:hover {
+  text-decoration: none !important;
+}
+@import '~bootstrap/scss/bootstrap';
+
+/*
+* Global CSS
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  // font-family: $font-stack;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: #2c3543;
+  line-height: 1.5;
+  background-color: #fff;
+  letter-spacing: 0.3px;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+a.link {
+  color: #12968b;
+  text-decoration: none;
+  background-color: transparent;
+}
+button {
+  box-shadow: none !important;
+}
+.page-title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 32px;
+}
+.head-panel {
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.img-cover {
+  height: 100%;
+  width: 100%;
+  position: static;
+  object-fit: cover;
+}
+.absolute-wrap {
+  position: absolute !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+}
+.d-flex {
+  display: flex;
+}
+.form-group-inline {
+  display: flex;
+  .form-group {
+    margin-right: 4px;
+    flex-grow: 1;
+  }
+}
+.pagination.center {
+  justify-content: center;
+}
+.table {
+  background-color: #fff;
+  &.table-dark {
+    background-color: #343a40;
+  }
+}
+ul.neutralize {
+  li {
+    list-style-type: none;
+  }
+}
+/**
+*
+*/
+.content-head {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  h1 {
+    font-size: 1.6rem;
+  }
+}
