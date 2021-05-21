@@ -11,8 +11,11 @@ const router = Router();
 // Authenticate and authorize all routes after this middleware
 router.use(protect, restrictTo(ROLES.admin, ROLES.staff));
 
-router.post('/', menuItemController.addMenuItem);
-router.patch('/:menuItem', validateMenuItemId, menuItemController.updateMenuItem);
+router.route('/').get(menuItemController.getAllMenu).post(menuItemController.addMenuItem);
+router
+  .route('/:menuItem')
+  .get(menuItemController.getMenuItemById)
+  .patch(validateMenuItemId, menuItemController.updateMenuItem);
 router
   .route('/:menuItem/photo')
   .post(validateMenuItemId, imageUpload.single('image'), requiredFile, menuItemController.addMenuItemImage)

@@ -1,9 +1,9 @@
 import { Model, Document, CreateQuery, Query, Aggregate } from 'mongoose';
 import { StatusCodes } from 'http-status-codes';
 import _ from 'lodash';
-import AppError from '../shared/utils/appError';
-import APIFeatures from '../shared/utils/apiFeatures';
-import { StringType } from '../types';
+import AppError from '../utils/appError';
+import APIFeatures from '../utils/apiFeatures';
+import { StringType } from '../../types';
 
 function createOne<T extends Document>(model: Model<T>, data: CreateQuery<T>): Promise<T> {
   return model.create(data);

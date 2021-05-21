@@ -1,5 +1,5 @@
 import MenuItem from '../../shared/models/menuItemModel';
-import factoryService from '../../services/factoryService';
+import factoryService from '../../shared/services/factoryService';
 import IMenuItem, { INutrientType } from '../../shared/interfaces/IMenuItem';
 import { NUTRIENTS } from '../../constants';
 

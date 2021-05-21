@@ -1,9 +1,35 @@
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
+import MenuItem from '../../shared/models/menuItemModel';
+import factoryService from '../../shared/services/factoryService';
 import AppError from '../../shared/utils/appError';
 import imageHandler from '../../shared/utils/imageHandler';
 import { StaffRequest } from '../interfaces/StaffRequest';
 import menuItemService from '../services/menuItemService';
+
+const getAllMenu = async (req: Request, res: Response): Promise<void> => {
+  const [menuItems, total, size] = await factoryService.getAll(MenuItem, req.query as any);
+
+  res.status(StatusCodes.CREATED).json({
+    status: 'success',
+    data: {
+      total,
+      size,
+      menuItems
+    }
+  });
+};
+
+const getMenuItemById = async (req: Request, res: Response): Promise<void> => {
+  const menuItem = await factoryService.getOneById(MenuItem, req.params.menuItem, 'Menu item');
+
+  res.status(StatusCodes.CREATED).json({
+    status: 'success',
+    data: {
+      menuItem
+    }
+  });
+};
 
 const addMenuItem = async (req: Request, res: Response): Promise<void> => {
   const menuItem = await menuItemService.addMenuItem(req.body);
@@ -30,7 +56,7 @@ const updateMenuItem = async (req: StaffRequest, res: Response): Promise<void> =
 const addMenuItemImage = async (req: StaffRequest, res: Response): Promise<void> => {
   const { menuItem } = req;
 
-  const photo = await imageHandler.uploadImage(req.file.buffer, `menu-${Date.now()}.jpg`);
+  const photo = await imageHandler.uploadImage(req.file.buffer, `menu-${Date.now()}.jpg`, 550, 550);
 
   menuItem.photo = photo;
   await menuItem.save();
@@ -60,6 +86,8 @@ const deleteMenuItemImage = async (req: StaffRequest, res: Response): Promise<vo
 };
 
 export default {
+  getAllMenu,
+  getMenuItemById,
   addMenuItem,
   updateMenuItem,
   addMenuItemImage,
