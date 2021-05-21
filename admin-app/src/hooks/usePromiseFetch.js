@@ -6,7 +6,7 @@ import { get } from '../utils/axios';
  * @returns {Array} [error, fetching, response]
  */
 export function usePromiseFetch(url, params) {
-  if (!params) params = useMemo(() => ({}), []);
+  params = useMemo(() => ({}), []);
 
   const [fetching, setFetching] = useState(true);
   const [data, setData] = useState(null);
