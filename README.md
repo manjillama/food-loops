@@ -1,6 +1,6 @@
 ## Project Introduction
 
-**Yatri Admin API server** is currently created using Node.js on the top of Express framework and TypeScript. For database, we've decided to go with MongoDB and and Mongoose as an ODM.
+**Batsal server** is currently created using Node.js on the top of Express framework and TypeScript. For database, we've decided to go with MongoDB and and Mongoose as an ODM.
 
 ## Folder structure
 
@@ -40,10 +40,10 @@ Then, please follow the instructions below:
 ```bash
 
 # Clone with SSH
-$ git clone git@github.com:yatri-motorcycles/admin-api-server.git
+$ git clone git@github.com:manjillama/batsal-project.git
 
 # Or with HTTPS
-$ git clone https://github.com/yatri-motorcycles/admin-api-server.git
+$ git clone https://github.com/manjillama/batsal-project.git
 ```
 
 ### Install dependencies
@@ -51,7 +51,7 @@ $ git clone https://github.com/yatri-motorcycles/admin-api-server.git
 Go to the root of the repository.
 
 ```bash
-$ cd admin-api-server && npm install
+$ cd api && npm install
 ```
 
 ### Start the application in development mode
@@ -102,15 +102,6 @@ To add custom configuration, go to config folder and update your configuration
       | prod.ts     # production environment configurations
 ```
 
-## Setup MongoDB Compass
-
-A GUI for MongoDB, MongoDB Compass give you better graphical overview about document structure, querying, indexing, document validation, and more.
-
-- Download MongoDB Compass [here](https://www.mongodb.com/try/download/compass)
-- Copy and paste below connection string (used for development and testing only) `mongodb+srv://manjiltamang:artyXjf7CtQZOIK6@cluster0.qnygb.mongodb.net`
-  - yatriDevDB (Development database)
-  - yatriTestDB (Test database)
-
 ## Contributing guide
 
-Read our [contributing guide](https://github.com/yatri-motorcycles/admin-api-server/blob/master/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes.
+Read our [contributing guide](https://github.com/manjillama/batsal-project/blob/master/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes.
