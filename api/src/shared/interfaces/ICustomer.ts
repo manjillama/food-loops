@@ -6,7 +6,6 @@ export interface ICustomerType {
   address: string;
   email: string;
   phoneNumber: number;
-  photo?: string;
 }
 
 export default interface ICustomer extends Document, ICustomerType {}

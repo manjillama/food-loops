@@ -34,10 +34,6 @@ const customerSchema = new mongoose.Schema(
       unique: [true, 'User with the phone number already exists'],
       minlength: [10, 'Please enter 10 digit number'],
       maxlength: [10, 'Please enter 10 digit number']
-    },
-    photo: {
-      type: String,
-      default: 'https://yatrihub.s3.amazonaws.com/static/avatar.png'
     }
   },
   {
