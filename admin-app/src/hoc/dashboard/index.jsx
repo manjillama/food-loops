@@ -33,6 +33,26 @@ export const withDashboard = (ChildComponent) => (props) =>
             </NavLink>
           </li>
         </ul>
+
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 8,
+            left: '50%',
+            color: '#fff',
+            transform: 'translateX(-50%)',
+            fontWeight: 700,
+          }}
+        >
+          &copy;{' '}
+          <a
+            href="https://manjiltamang.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Manjil Tamang
+          </a>
+        </div>
       </nav>
       <div className="_main_panel">
         <TopNav />

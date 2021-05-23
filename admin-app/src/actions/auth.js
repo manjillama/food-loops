@@ -15,15 +15,20 @@ export const signIn = (formProps, errorCallback) => (dispatch) => {
   }, errorCallback);
 };
 
-export const fetchUser = (callback) => (dispatch) => {
+export const fetchUser = (callback, user) => (dispatch) => {
   catchAsync(
     async () => {
-      const response = await axios.get('/users/current-user');
-      const data = response.data.data;
+      let _user;
+
+      if (user) _user = user;
+      else {
+        const response = await axios.get('/users/current-user');
+        _user = response.data.data.user;
+      }
 
       dispatch({
         type: FETCH_USER,
-        payload: data.user,
+        payload: _user,
       });
       callback();
     },

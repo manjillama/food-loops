@@ -4,6 +4,7 @@ import AddMenuPage from './add-menu';
 import UpdateMenuPage from './update-menu';
 import MenuItemPage from './menu-item';
 import OrderDetailPage from './order-detail';
+import ProfilePage from './profile';
 
 export {
   StartPage,
@@ -12,4 +13,5 @@ export {
   UpdateMenuPage,
   MenuItemPage,
   OrderDetailPage,
+  ProfilePage,
 };

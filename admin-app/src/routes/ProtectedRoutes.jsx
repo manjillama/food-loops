@@ -9,6 +9,7 @@ import {
   UpdateMenuPage,
   MenuItemPage,
   OrderDetailPage,
+  ProfilePage,
 } from '../pages';
 
 const ProtectedRoutes = () => {
@@ -23,6 +24,8 @@ const ProtectedRoutes = () => {
         <Route path="/menu/:menuItemId" component={MenuItemPage} exact />
 
         <Route path="/orders/:orderId" component={OrderDetailPage} exact />
+
+        <Route path="/profile" component={ProfilePage} exact />
 
         <Route component={NotFoundPage} />
       </Switch>
