@@ -13,6 +13,6 @@ router.post('/login', validateFields, authController.login);
 router.use(protect, restrictTo(ROLES.admin, ROLES.staff));
 
 router.get('/', userController.getAllUsers);
-router.get('/current-user', authController.getLoggedInUser);
+router.route('/current-user').get(authController.getLoggedInUser).patch(userController.updateUser);
 
 export default router;
