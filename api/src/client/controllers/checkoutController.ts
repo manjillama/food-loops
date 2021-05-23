@@ -6,7 +6,7 @@ import Customer from '../../shared/models/customerModel';
 import CustomerOrder from '../../shared/models/customerOrderModel';
 
 const checkout = async (req: IRequest, res: Response): Promise<void> => {
-  const { firstName, lastName, address, email, phoneNumber, orderedItems } = req.body;
+  const { firstName, lastName, address, email, phoneNumber, orderedItems, deliveryDate } = req.body;
 
   const customer = await factoryService.createOne(Customer, {
     firstName,
@@ -17,6 +17,7 @@ const checkout = async (req: IRequest, res: Response): Promise<void> => {
   });
 
   await factoryService.createOne(CustomerOrder, {
+    deliveryDate,
     customer,
     orderedItems
   });

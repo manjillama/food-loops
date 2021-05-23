@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+import mongoose, { HookNextFunction } from 'mongoose';
+import { config } from '../../config';
 import ICustomerOrder from '../interfaces/ICustomerOrder';
 
 export const orderedItemSchema = new mongoose.Schema({
@@ -19,10 +20,20 @@ export const orderedItemSchema = new mongoose.Schema({
 });
 
 const customerOrderModelSchema = new mongoose.Schema({
-  orderDate: {
+  deliveryCharge: {
+    type: Number,
+    default: config.deliveryCharge,
+    required: [true, 'Please provide a delivery charge']
+  },
+  totalCost: Number,
+  deliveryDate: {
     type: Date,
     default: Date.now,
-    select: false
+    required: [true, 'Please provide a delivery date']
+  },
+  orderedDate: {
+    type: Date,
+    default: Date.now
   },
   remarks: String,
   customer: {
@@ -31,6 +42,13 @@ const customerOrderModelSchema = new mongoose.Schema({
     required: [true, 'Please specify a customer id']
   },
   orderedItems: [orderedItemSchema]
+});
+
+customerOrderModelSchema.pre<ICustomerOrder>('save', function (next: HookNextFunction) {
+  if (!this.isModified('orderedItems')) return next();
+
+  this.totalCost = this.orderedItems.reduce((a, b) => a + b.price, 0) + this.deliveryCharge;
+  next();
 });
 
 const CustomerOrder = mongoose.model<ICustomerOrder>('CustomerOrder', customerOrderModelSchema);
