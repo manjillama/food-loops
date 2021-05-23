@@ -14,5 +14,6 @@ router.use(protect, restrictTo(ROLES.admin, ROLES.staff));
 
 router.get('/', userController.getAllUsers);
 router.route('/current-user').get(authController.getLoggedInUser).patch(userController.updateUser);
+router.put('/current-user/change-password', userController.updateUserPassword);
 
 export default router;

@@ -20,7 +20,7 @@ export const protect = async (req: StaffRequest, res: Response, next: NextFuncti
   });
 
   // 3) Check if user exists
-  const currentUser = await Staff.findById(decoded.id);
+  const currentUser = await Staff.findById(decoded.id).select('+password');
   if (!currentUser) throw new AppError('The user belonging to this token does no longer exist.', 401);
 
   // 4) Check if user changed password after the token was issued
