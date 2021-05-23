@@ -14,7 +14,11 @@ export default function (app: Application): void {
 
   app.use(cors({ origin: config.CORS_WHITELISTS, credentials: true }));
 
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: false
+    })
+  );
   // Data sanitization against NOSQL query injection
   app.use(mongoSanitize());
   // Data sanitization against XSS
