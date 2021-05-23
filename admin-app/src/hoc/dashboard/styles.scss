@@ -13,6 +13,7 @@ $side-nav-width: 264px;
   min-height: 100%;
   overflow-y: scroll;
   box-shadow: rgba(0, 0, 0, 0.05) -4px 0px 20px inset;
+  background-color: $primary-color;
   @include transition;
   .nav-brand {
     align-items: center;
@@ -31,6 +32,7 @@ $side-nav-width: 264px;
   .nav-links {
     padding: 12px 0;
     > li {
+      margin-bottom: 8px;
       a,
       button {
         border-width: 0;
@@ -40,26 +42,27 @@ $side-nav-width: 264px;
         display: block;
         border-radius: 5px;
         font-size: 14px;
-        color: rgb(118, 118, 118);
+        font-weight: 700;
+        color: #fff;
         .s-icon {
           display: inline-block;
           width: 15px;
           height: 15px;
           margin-right: 8px;
           i {
-            color: $primary-color;
+            color: #fff;
           }
         }
 
         &.active {
-          color: #000;
-          background-color: rgb(235, 235, 235);
+          color: #fff;
+          background-color: #33825c;
           & ~ .dropdown {
             height: 100%;
           }
         }
         &:hover {
-          background-color: #ebebeb;
+          background-color: #33825c;
         }
       }
       .dropdown {
@@ -82,9 +85,10 @@ $side-nav-width: 264px;
   // padding-bottom: 5rem;
   @include transition;
   .nav-top {
-    padding: 12px;
+    padding: 8px;
     justify-content: space-between;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     .hamburger {
       padding: 6px;
       display: none;
@@ -98,16 +102,16 @@ $side-nav-width: 264px;
     }
     .nav-links {
       > li {
-        > a,
-        > button {
-          padding: 4px 12px;
-          border-radius: 5px;
-          font-size: 14px;
-          color: rgb(72, 72, 72);
-          font-weight: 600;
-          &:hover {
-            background-color: hsla(0, 0%, 100%, 0.08);
-          }
+        a,
+        button {
+          // padding: 4px 12px;
+          // border-radius: 5px;
+          font-size: 13px;
+          // color: rgb(72, 72, 72);
+          font-weight: 700;
+          // &:hover {
+          //   background-color: hsla(0, 0%, 100%, 0.08);
+          // }
         }
       }
     }

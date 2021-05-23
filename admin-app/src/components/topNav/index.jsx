@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Dropdown } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { signOut } from '../../actions';
 import { selectAuth } from '../../selectors';
 import './styles.scss';
@@ -53,7 +54,15 @@ const TopNav = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item onClick={onLogout}>Logout</Dropdown.Item>
+              <Dropdown.Item>
+                <Link to="/profile">
+                  <i className="fas fa-user"></i> Profile
+                </Link>
+              </Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item onClick={onLogout}>
+                <i className="fas fa-sign-out-alt"></i> Logout
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </li>

@@ -31,23 +31,25 @@ const AddMenuPage = () => {
     <div>
       <Row className="justify-content-md-center">
         <Col xs lg="8">
-          <Row>
-            <Col>
-              {error && <Alert variant="danger">{error}</Alert>}
-              <div className="content-head">
-                <h1>Add new dish</h1>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <MenuForm
-                handleSubmit={handleSubmit}
-                formProps={formProps}
-                setFormProps={setFormProps}
-              />
-            </Col>
-          </Row>
+          <div className="body-card">
+            <Row>
+              <Col>
+                {error && <Alert variant="danger">{error}</Alert>}
+                <div className="content-head">
+                  <h1>Add new dish</h1>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <MenuForm
+                  handleSubmit={handleSubmit}
+                  formProps={formProps}
+                  setFormProps={setFormProps}
+                />
+              </Col>
+            </Row>
+          </div>
         </Col>
       </Row>
     </div>

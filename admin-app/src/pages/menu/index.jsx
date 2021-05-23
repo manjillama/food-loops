@@ -13,7 +13,7 @@ const MenuPage = () => {
   const { menuItems } = response;
 
   return (
-    <div>
+    <div className="body-card">
       <Row>
         <Col>
           <div className="content-head">
@@ -40,7 +40,10 @@ const MenuPage = () => {
                 {menuItems.map((menu) => (
                   <tr key={menu._id}>
                     <td>
-                      <Link className="link" to={`/menu/${menu._id}`}>
+                      <Link
+                        className="btn btn-light link"
+                        to={`/menu/${menu._id}`}
+                      >
                         {menu.name}
                       </Link>
                     </td>

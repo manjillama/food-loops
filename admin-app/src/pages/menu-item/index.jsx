@@ -56,69 +56,71 @@ const MenuItemPage = () => {
       <Row>
         <Col>
           <section>
-            <Link
-              to={`/menu/${menuItem._id}/edit`}
-              className="btn btn-warning float-btn"
-            >
-              <i className="fas fa-edit"></i>
-            </Link>
-            <Row>
-              <Col md="6" className=" l-wrapper">
-                <UploadImage
-                  image={photo}
-                  handleImageRemove={handleImageRemove}
-                  handleImageUpload={handleImageUpload}
-                />
-              </Col>
-              <Col md="6" className="r-wrapper">
-                <div className="g-info">
-                  <h1>{name}</h1>
-                  <p>{description}</p>
-                  <p
-                    style={{
-                      fontWeight: 700,
-                      fontSize: 24 + 'px',
-                      marginTop: 12 + 'px',
-                      color: '#47b581',
-                    }}
-                  >
-                    Rs. {price}
-                  </p>
-                </div>
+            <div className="body-card">
+              <Link
+                to={`/menu/${menuItem._id}/edit`}
+                className="btn btn-warning float-btn"
+              >
+                <i className="fas fa-edit"></i>
+              </Link>
+              <Row>
+                <Col md="6" className=" l-wrapper">
+                  <UploadImage
+                    image={photo}
+                    handleImageRemove={handleImageRemove}
+                    handleImageUpload={handleImageUpload}
+                  />
+                </Col>
+                <Col md="6" className="r-wrapper">
+                  <div className="g-info">
+                    <h1>{name}</h1>
+                    <p>{description}</p>
+                    <p
+                      style={{
+                        fontWeight: 700,
+                        fontSize: 24 + 'px',
+                        marginTop: 12 + 'px',
+                        color: '#47b581',
+                      }}
+                    >
+                      Rs. {price}
+                    </p>
+                  </div>
 
-                <div className="md-cate">
-                  <h4>Dish Category</h4>
-                  {categories.map((category) => (
-                    <span className="badge badge-info" key={category}>
-                      {category}
-                    </span>
-                  ))}
-                </div>
-
-                <hr />
-                <div className="n-panel">
-                  <h4>Nutritions</h4>
-                  <div className="d-flex eq-w-child">
-                    <div>
-                      <div className="n-circle">{servingSize}Oz</div>
-                      <p className="text-center">
-                        <small>Serving Size</small>
-                      </p>
-                    </div>
-                    {nutrients.map((nutrient) => (
-                      <div key={nutrient.name}>
-                        <div className="n-circle">
-                          {nutrient.amount + '' + nutrient.unit}
-                        </div>
-                        <p className="text-center">
-                          <small>{nutrient.name}</small>
-                        </p>
-                      </div>
+                  <div className="md-cate">
+                    <h4>Dish Category</h4>
+                    {categories.map((category) => (
+                      <span className="badge badge-info" key={category}>
+                        {category}
+                      </span>
                     ))}
                   </div>
-                </div>
-              </Col>
-            </Row>
+
+                  <hr />
+                  <div className="n-panel">
+                    <h4>Nutritions</h4>
+                    <div className="d-flex eq-w-child">
+                      <div>
+                        <div className="n-circle">{servingSize}Oz</div>
+                        <p className="text-center">
+                          <small>Serving Size</small>
+                        </p>
+                      </div>
+                      {nutrients.map((nutrient) => (
+                        <div key={nutrient.name}>
+                          <div className="n-circle">
+                            {nutrient.amount + '' + nutrient.unit}
+                          </div>
+                          <p className="text-center">
+                            <small>{nutrient.name}</small>
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
           </section>
         </Col>
       </Row>
