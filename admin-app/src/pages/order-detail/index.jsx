@@ -31,7 +31,9 @@ const OrderDetailPage = () => {
         <Row>
           <Col md="6" style={{ marginBottom: 15 }}>
             <Card>
-              <Card.Header>Customer</Card.Header>
+              <Card.Header>
+                <strong>Customer</strong>
+              </Card.Header>
               <Card.Body>
                 <ul className="neutralize">
                   <li>
@@ -61,7 +63,9 @@ const OrderDetailPage = () => {
 
           <Col md="6" style={{ marginBottom: 15 }}>
             <Card>
-              <Card.Header>Order info</Card.Header>
+              <Card.Header>
+                <strong>Order info</strong>
+              </Card.Header>
               <Card.Body>
                 <ul className="neutralize">
                   <li>

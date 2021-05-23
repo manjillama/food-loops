@@ -47,7 +47,7 @@ const MenuPage = () => {
                         {menu.name}
                       </Link>
                     </td>
-                    <td>{menu.price}</td>
+                    <td>Rs. {menu.price}</td>
                     <td>
                       {menu.categories.map((category) => (
                         <span

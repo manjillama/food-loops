@@ -10,6 +10,7 @@ const AddMenuPage = () => {
 
   const [formProps, setFormProps] = useState({
     isEnabled: true,
+    isHotMeal: false,
     name: '',
     description: '',
     price: 0,
@@ -23,7 +24,7 @@ const AddMenuPage = () => {
     e.preventDefault();
     setError('');
     post('/menu', formProps)
-      .then(() => history.push('/menu'))
+      .then(({ data: { data } }) => history.push(`/menu/${data.menuItem._id}`))
       .catch((err) => setError(err.response?.data?.message));
   }
 

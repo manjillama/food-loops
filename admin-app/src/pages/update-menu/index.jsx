@@ -17,6 +17,7 @@ const UpdateMenuPage = () => {
 
   const [formProps, setFormProps] = useState({
     isEnabled: true,
+    isHotMeal: false,
     name: '',
     description: '',
     price: 0,
@@ -34,7 +35,7 @@ const UpdateMenuPage = () => {
     e.preventDefault();
     setError('');
     patch(`/menu/${menuItemId}`, formProps)
-      .then(() => history.push('/menu'))
+      .then(() => history.push(`/menu/${menuItemId}`))
       .catch((err) => setError(err.response?.data?.message));
   }
 

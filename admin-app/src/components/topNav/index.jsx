@@ -54,10 +54,8 @@ const TopNav = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item>
-                <Link to="/profile">
-                  <i className="fas fa-user"></i> Profile
-                </Link>
+              <Dropdown.Item href="/profile">
+                <i className="fas fa-user"></i> Profile
               </Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item onClick={onLogout}>

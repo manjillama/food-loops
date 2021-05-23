@@ -42,6 +42,8 @@ const MenuItemPage = () => {
   }
 
   const {
+    isEnabled,
+    isHotMeal,
     name,
     description,
     price,
@@ -73,8 +75,17 @@ const MenuItemPage = () => {
                 </Col>
                 <Col md="6" className="r-wrapper">
                   <div className="g-info">
+                    <div className="md-cate" style={{ marginTop: 0 }}>
+                      <span className="badge badge-secondary">
+                        {isEnabled ? 'Enabled' : 'Not enabled'}
+                      </span>
+                      <span className="badge badge-warning">
+                        {isHotMeal ? 'Hot meal' : 'Not hot meal'}
+                      </span>
+                    </div>
+
                     <h1>{name}</h1>
-                    <p>{description}</p>
+                    <p className="text-preline">{description}</p>
                     <p
                       style={{
                         fontWeight: 700,

@@ -4,6 +4,7 @@ import NutrientsField from './NutrientsField';
 const MenuForm = ({ formProps, setFormProps, handleSubmit }) => {
   const {
     isEnabled,
+    isHotMeal,
     name,
     description,
     price,
@@ -45,14 +46,26 @@ const MenuForm = ({ formProps, setFormProps, handleSubmit }) => {
   return (
     <section>
       <form onSubmit={handleSubmit}>
-        <Checkbox
-          onChange={handleChange}
-          name="isEnabled"
-          label="Enabled"
-          id="inline-enabled"
-          inline
-          checked={isEnabled}
-        />
+        <div>
+          <Checkbox
+            onChange={handleChange}
+            name="isEnabled"
+            label="Enabled"
+            id="inline-enabled"
+            inline
+            checked={isEnabled}
+          />
+        </div>
+        <div>
+          <Checkbox
+            onChange={handleChange}
+            name="isHotMeal"
+            label="Hot Meal"
+            id="inline-hotmeal"
+            inline
+            checked={isHotMeal}
+          />
+        </div>
         <hr />
         <TextInput
           onChange={handleChange}
