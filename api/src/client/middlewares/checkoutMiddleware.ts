@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import Joi from 'joi';
-import _ from 'lodash';
 import AppError from '../../shared/utils/appError';
 import MenuItem from '../../shared/models/menuItemModel';
 import { validateSchema } from '../../shared/utils/validator';
@@ -23,7 +22,9 @@ export const validateCheckout = async (req: Request, res: Response, next: NextFu
 
   validateSchema(checkoutBodySchema, req.body);
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const item of menuItems) {
+    // eslint-disable-next-line no-await-in-loop
     const orderedItem = await MenuItem.findById(item.menuItem);
     if (orderedItem) orderedItems.push({ menuItem: item.menuItem, quantity: item.quantity, price: orderedItem.price });
   }

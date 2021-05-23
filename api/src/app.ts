@@ -15,6 +15,8 @@ process.env.TZ = 'Europe/Amsterdam';
 
 const app = express();
 
+app.use(express.static('build'));
+
 loadModules(app);
 loadRoutes(app);
 loadDB();
