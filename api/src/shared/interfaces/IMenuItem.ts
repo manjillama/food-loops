@@ -12,6 +12,7 @@ export interface IMenuItemType {
   price: number;
   servingSize: number;
   photo?: string;
+  isHotMeal?: boolean;
   isEnabled?: boolean;
   type: 'Main Dish' | 'Side Dish';
   categories: ['Beverages' | 'Breakfast' | 'Lunch' | 'Dinner'];

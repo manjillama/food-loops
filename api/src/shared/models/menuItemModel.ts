@@ -38,6 +38,10 @@ const menuItemSchema = new mongoose.Schema({
   photo: {
     type: String
   },
+  isHotMeal: {
+    type: Boolean,
+    default: false
+  },
   isEnabled: {
     type: Boolean,
     default: true
