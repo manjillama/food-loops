@@ -46,12 +46,13 @@ const menuItemSchema = new mongoose.Schema({
     type: Boolean,
     default: true
   },
-  type: {
-    type: String,
-    required: [true, 'Please provide a dish type'],
-    default: 'Main Dish',
-    enum: ['Main Dish', 'Side Dish']
-  },
+  types: [
+    {
+      type: String,
+      required: [true, 'Please provide a dish type'],
+      enum: ['Veg', 'Non-Veg', 'Vegan']
+    }
+  ],
   categories: [
     {
       type: String,

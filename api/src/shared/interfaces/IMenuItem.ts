@@ -14,7 +14,7 @@ export interface IMenuItemType {
   photo?: string;
   isHotMeal?: boolean;
   isEnabled?: boolean;
-  type: 'Main Dish' | 'Side Dish';
+  types: ['Veg' | 'Non-Veg' | 'Vegan'];
   categories: ['Beverages' | 'Breakfast' | 'Lunch' | 'Dinner'];
   nutrients: Types.Array<INutrient>;
 }

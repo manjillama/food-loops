@@ -10,6 +10,7 @@ const MenuForm = ({ formProps, setFormProps, handleSubmit }) => {
     price,
     servingSize,
     categories,
+    types,
     nutrients,
   } = formProps;
 
@@ -17,9 +18,11 @@ const MenuForm = ({ formProps, setFormProps, handleSubmit }) => {
     let { name, type, checked, value, dataset } = e.currentTarget;
 
     if (name === 'categories') {
-      // Update categories
       if (checked) value = [...formProps.categories, value];
       else value = formProps.categories.filter((c) => c !== value);
+    } else if (name === 'types') {
+      if (checked) value = [...formProps.types, value];
+      else value = formProps.types.filter((c) => c !== value);
     } else if (name === 'nutrients') {
       // Update nutrients
       if (dataset.add) {
@@ -96,6 +99,25 @@ const MenuForm = ({ formProps, setFormProps, handleSubmit }) => {
           label="Serving size (Oz)"
           name="servingSize"
         />
+        <hr />
+
+        <div className="form-group">
+          <div>
+            <label>Meal Type</label>
+          </div>
+          {['Non-Veg', 'Veg', 'Vegan'].map((t) => (
+            <Checkbox
+              key={t}
+              inline
+              onChange={handleChange}
+              name="types"
+              label={t}
+              id={`inline-${t}`}
+              value={t}
+              checked={types.includes(t)}
+            />
+          ))}
+        </div>
         <hr />
         <div className="form-group">
           <div>

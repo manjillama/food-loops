@@ -15,6 +15,7 @@ const AddMenuPage = () => {
     description: '',
     price: 0,
     servingSize: 0,
+    types: [],
     categories: [],
     nutrients: [],
   });

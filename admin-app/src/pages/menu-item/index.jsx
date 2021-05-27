@@ -48,6 +48,7 @@ const MenuItemPage = () => {
     description,
     price,
     servingSize,
+    types,
     categories,
     nutrients,
     photo,
@@ -96,6 +97,15 @@ const MenuItemPage = () => {
                     >
                       Rs. {price}
                     </p>
+                  </div>
+
+                  <div className="md-cate">
+                    <h4>Meal Type</h4>
+                    {types.map((type) => (
+                      <span className="badge badge-primary" key={type}>
+                        {type}
+                      </span>
+                    ))}
                   </div>
 
                   <div className="md-cate">

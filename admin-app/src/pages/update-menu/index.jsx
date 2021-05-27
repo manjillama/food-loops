@@ -23,6 +23,7 @@ const UpdateMenuPage = () => {
     price: 0,
     servingSize: 0,
     categories: [],
+    types: [],
     nutrients: [],
   });
   const [error, setError] = useState('');
