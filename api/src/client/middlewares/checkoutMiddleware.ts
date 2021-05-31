@@ -34,7 +34,8 @@ export const validateCheckout = async (req: Request, res: Response, next: NextFu
   for (const item of menuItems) {
     // eslint-disable-next-line no-await-in-loop
     const orderedItem = await MenuItem.findById(item.menuItem);
-    if (orderedItem) orderedItems.push({ menuItem: item.menuItem, quantity: item.quantity, price: orderedItem.price });
+    if (orderedItem)
+      orderedItems.push({ menuItem: item.menuItem, quantity: item.quantity, price: orderedItem.price * item.quantity });
   }
 
   if (orderedItems.length <= 0) throw new AppError('Order menu items empty or not valid', StatusCodes.BAD_REQUEST);
