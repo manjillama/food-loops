@@ -31,7 +31,6 @@ const customerSchema = new mongoose.Schema(
     phoneNumber: {
       type: String,
       required: [true, 'Please provide a phone number'],
-      unique: [true, 'User with the phone number already exists'],
       minlength: [10, 'Please enter 10 digit number'],
       maxlength: [10, 'Please enter 10 digit number']
     }
