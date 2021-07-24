@@ -164,7 +164,7 @@ Response
 Request
 
 ```curl
-GET /api/menu/{{menu_item_id}}
+GET /api/menu/60a4d13d87103d230da48c57
 ```
 
 Response
