@@ -4,7 +4,7 @@ Developers are required to read through the general coding guidelines and follow
 
 ## Github
 
-Guidelines to follow when contributing to the Yatri codebase
+Guidelines to follow when contributing to the Food Loops codebase
 
 ### Branch Naming Convention
 
@@ -36,13 +36,6 @@ The following convention should be followed:
 - **Write good commit messages.**
   - They should be 50 characters max.
   - Use the imperative. Eg. "**Allow** scheduling appointments" and not "Allowed scheduling appointments" or "Allows scheduling appointments."
-  - Prefix your commit with corresponding **_ClickUp Task Id_** i.e. `<task-id>: <your commit message>`
-    - i.e. `1da4n0: create separate button component`
-  - If the task has not yet been created then the reader should know the issue being addressed by reading the commit message.
-    - Features should follow: `feature: <short-new-feature-description>`
-    - Bug fix should follow: `fix: <short-bug-description>`
-    - i.e. `fix: update prettier config`
-  - Refer to <a href="https://github.com/yatri-motorcycles/conventional-commit-types">conventional commit types</a> for list of commit types.
 
 ### Pull Request Best Practices
 
