@@ -4,7 +4,7 @@
 
 The project serves as an API server for both users `/api/**` and admins `/api/admin/**` as well as a static host server for the admin web app at base url `/`.
 
-> Before running the server is production mode using `npm run start` make sure to build the `admin-app` project.
+> Before running the server in production mode using `npm run start` make sure to build the `/admin-app` project.
 
 ## Folder structure
 
@@ -21,7 +21,7 @@ The project serves as an API server for both users `/api/**` and admins `/api/ad
     |-- startup       # Split the startup process into modules
     |-- types         # TypeScript types
     |-- admin         # Admin side API related files
-    |-- client        # User side API relation files
+    |-- client        # User side API related files
     |-- shared        # Shared interfaces, modiles, services , utils etc between admin and client project
 
 ```

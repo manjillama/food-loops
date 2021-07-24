@@ -2,7 +2,7 @@
 
 ## Set environment variables
 
-You can create a .env file inside your `/admin-app` and add theses configurations. Be sure to modify the values beforehand.
+You can create a .env file inside your `/admin-app` and add these configurations. Be sure to modify the values beforehand.
 
 ```bash
 # By default admin server runs on port 5001
