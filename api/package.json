@@ -1,7 +1,6 @@
 {
   "name": "api-server",
   "version": "1.0.0",
-  "description": "API server for food app project",
   "scripts": {
     "start": "tsc && NODE_ENV=production node dist/index",
     "build": "tsc",
