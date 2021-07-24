@@ -20,17 +20,17 @@ const PasswordChangeForm = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setError('');
-    setSubmitting(true);
+    // setSubmitting(true);
 
-    put('/users/current-user/change-password', formProps)
-      .then(({ data: { data } }) => {
-        setSubmitting(false);
-        localStorage.setItem('token', data.token);
-      })
-      .catch((err) => {
-        setError(err.response?.data?.message);
-        setSubmitting(false);
-      });
+    // put('/users/current-user/change-password', formProps)
+    //   .then(({ data: { data } }) => {
+    //     setSubmitting(false);
+    //     localStorage.setItem('token', data.token);
+    //   })
+    //   .catch((err) => {
+    //     setError(err.response?.data?.message);
+    //     setSubmitting(false);
+    //   });
   }
 
   return (
@@ -42,6 +42,9 @@ const PasswordChangeForm = () => {
               <div className="content-head">
                 <h1>Change password</h1>
               </div>
+              <p className="alert alert-danger">
+                Password update disabled for demo.
+              </p>
             </Col>
           </Row>
           <section>
@@ -66,7 +69,7 @@ const PasswordChangeForm = () => {
 
                   <hr />
                   <button
-                    disabled={submitting}
+                    disabled
                     className="btn btn-primary"
                     style={{ position: 'relative', padding: '.5rem 2.5rem' }}
                   >

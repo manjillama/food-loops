@@ -38,7 +38,7 @@ const MenuItemPage = () => {
 
   function handleImageRemove() {
     setMenuItem({ ...menuItem, photo: null });
-    del(`/menu/${menuItemId}/photo`);
+    // del(`/menu/${menuItemId}/photo`);
   }
 
   const {
@@ -56,6 +56,13 @@ const MenuItemPage = () => {
 
   return (
     <div id="menuDetail">
+      <Row>
+        <Col>
+          <div className="alert alert-danger">
+            New menu image upload/delete disabled for demo.
+          </div>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <section>

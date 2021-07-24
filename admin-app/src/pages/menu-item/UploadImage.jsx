@@ -21,39 +21,22 @@ const UploadImage = ({ image, handleImageUpload, handleImageRemove }) => {
       showImageUploading: true,
       disabled: true,
     });
-    /*
-     ** If file is less than a MB
-     **    If image is not square
-     */
-    const file = acceptedFile[0];
-
-    if (!file) setDropzone({ ...dropzone, error: 'Unsupported file.' });
-    else {
-      var img = new Image();
-      img.onload = () => {
-        if (img.height !== img.width)
-          setDropzone({ ...dropzone, error: 'Please use a square image.' });
-        else
-          handleImageUpload(file, () =>
-            setDropzone({ ...dropzone, showImageUploading: false })
-          );
-      };
-      img.src = URL.createObjectURL(file);
-    }
+    setDropzone({ ...dropzone, error: 'Image upload disabled' });
   }
 
   if (image)
     return (
       <div className="i-wrapper">
-        <span
+        <button
           onClick={() => {
             setDropzone({ ...dropzone, disabled: false });
             handleImageRemove();
           }}
           className="btn-danger btn i-rem-btn"
+          disabled
         >
           x
-        </span>
+        </button>
         <img className="img-fluid" src={image} alt="food" />
       </div>
     );
