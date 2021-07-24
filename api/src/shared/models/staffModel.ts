@@ -56,8 +56,7 @@ const staffSchema = new mongoose.Schema(
       select: false
     },
     photo: {
-      type: String,
-      default: 'https://yatrihub.s3.amazonaws.com/static/avatar.png'
+      type: String
     }
   },
   {
