@@ -1,7 +1,7 @@
 {
   "name": "api-server",
   "version": "0.0.1",
-  "description": "API server for batsal project",
+  "description": "API server for food app project",
   "scripts": {
     "start": "tsc && NODE_ENV=production node dist/index",
     "build": "tsc",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/manjillama/batsal-project"
+    "url": "https://github.com/manjillama/food-app"
   },
   "author": "Manjil Tamang",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/manjillama/batsal-project/issues"
+    "url": "https://github.com/manjillama/food-app/issues"
   },
-  "homepage": "https://github.com/manjillama/batsal-project#readme",
+  "homepage": "https://github.com/manjillama/food-app#readme",
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/compression": "^1.7.0",

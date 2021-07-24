@@ -6,8 +6,8 @@ import { Container, Row, Col, Alert, Form, Button } from 'react-bootstrap';
 
 function LoginPage() {
   const [formProps, setFormProps] = useState({
-    email: 'lamamanjil@gmail.com',
-    password: 'manjillama',
+    email: 'hello@manjiltamang.com',
+    password: 'admin123',
   });
   const [error, setError] = useState('');
 

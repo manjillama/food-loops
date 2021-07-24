@@ -10,7 +10,7 @@ import loadModules from './startup/modules';
 import errorHandler from './shared/middlewares/error';
 import loadRoutes from './startup/routes';
 
-// Changeing default timezone
+// Changing default timezone
 process.env.TZ = 'Europe/Amsterdam';
 
 const app = express();
