@@ -25,18 +25,18 @@ const ProfileForm = () => {
     setError('');
     setSubmitting(true);
 
-    patch('/users/current-user', formProps)
-      .then(({ data: { data } }) => {
-        dispatch(
-          fetchUser(() => {
-            setSubmitting(false);
-          }, data.user)
-        );
-      })
-      .catch((err) => {
-        setError(err.response?.data?.message);
-        setSubmitting(false);
-      });
+    // patch('/users/current-user', formProps)
+    //   .then(({ data: { data } }) => {
+    //     dispatch(
+    //       fetchUser(() => {
+    //         setSubmitting(false);
+    //       }, data.user)
+    //     );
+    //   })
+    //   .catch((err) => {
+    //     setError(err.response?.data?.message);
+    //     setSubmitting(false);
+    //   });
   }
 
   return (
@@ -48,6 +48,9 @@ const ProfileForm = () => {
               <div className="content-head">
                 <h1>Account</h1>
               </div>
+              <p className="alert alert-danger">
+                Account update disabled for demo.
+              </p>
             </Col>
           </Row>
           <section>
@@ -78,7 +81,7 @@ const ProfileForm = () => {
 
                   <hr />
                   <button
-                    disabled={submitting}
+                    disabled
                     className="btn btn-primary"
                     style={{ position: 'relative', padding: '.5rem 2.5rem' }}
                   >
