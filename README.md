@@ -3,7 +3,9 @@
 Easily customizable. **Food app project** is currently created using Node.js on the top of Express framework and TypeScript. For database, we've decided to go with MongoDB and and Mongoose as an ODM. Also using AWS S3 for image storage but you can update code to your own requirements.
 
 <div align="center">
+  
   ![](https://github.com/manjillama/food-app/blob/add-banner/banner.gif)
+  
 </div>
 
 The content is divided into several sections:
