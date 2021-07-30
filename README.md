@@ -10,10 +10,10 @@ Easily customizable. **Food app project** is currently created using Node.js on 
 
 The content is divided into several sections:
 
-- [Requirements](#requirements)
-- [Setup](#setup)
-- [Documentation](#documentation)
-- [Contributing guide](#contributing-guide)
+- [Requirements](#-requirements)
+- [Setup](#-setup)
+- [Documentation](#-documentation)
+- [Contributing guide](#-contributing-guide)
 
 ## Requirements
 
