@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
-
+import Staff from '../shared/models/staffModel';
+import staffData from './staff.json';
 import mongoose from 'mongoose';
 
 import { keys } from '../config';
@@ -15,8 +16,7 @@ mongoose.connect(keys.MONGO_URI, {
 // Import data into database
 const importData = async () => {
   try {
-    // Load data
-
+    await Staff.create(staffData);
     console.log('✨ Data successfully loaded');
   } catch (err) {
     console.log(err);
@@ -27,8 +27,6 @@ const importData = async () => {
 // Delete all data from collection
 const deleteData = async () => {
   try {
-    // Delete data
-
     console.log('✨ Data successfully deleted');
   } catch (err) {
     console.log(err);

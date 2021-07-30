@@ -12,10 +12,10 @@ Currently created using Node.js on the top of Express framework and TypeScript. 
 
 The content is divided into several sections:
 
-- [Requirements](#requirements)
-- [Setup](#setup)
-- [Documentation](#documentation)
-- [Contributing guide](#contributing-guide)
+- [Requirements](#-requirements)
+- [Setup](#-setup)
+- [Documentation](#-documentation)
+- [Contributing guide](#-contributing-guide)
 
 ## 🎛 Requirements
 
