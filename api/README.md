@@ -38,6 +38,12 @@ Inside the current `/api` directory.
 $ npm install
 ```
 
+### Populate database collections with sample documents
+
+```
+$ npm run seed:import
+```
+
 ### Start the application in development mode
 
 ```
@@ -64,12 +70,6 @@ $ npm run debug
 
 ```bash
 $ npm run seed:delete
-```
-
-### Populate database collections with sample documents
-
-```bash
-$ npm run seed:import
 ```
 
 ## Configuration
