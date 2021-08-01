@@ -58,6 +58,16 @@ Request
 GET /api/menu
 ```
 
+You can add sorting, filters, paginations by adding the request params to the request.
+
+| Request Params Fields                           | Values                                                                   |
+| ----------------------------------------------- | ------------------------------------------------------------------------ |
+| E.g. isHotMeal, isEnabled, type etc. (Optional) | Field value (Using same field multiple times will result in union query) |
+| page (Optional)                                 | Page number (default value is 1)                                         |
+| size (Optional)                                 | Size of response list per page (default is 40)                           |
+| sort (Optional)                                 | -field i.e. -price (Sort using price in descending order)                |
+| fields (Optional)                               | i.e. id, name, categories, etc. (Fetch provided fields only)             |
+
 Response
 
 ```json
