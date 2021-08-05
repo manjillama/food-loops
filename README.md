@@ -1,6 +1,6 @@
 ## 🥙 Project Introduction
 
-Easily customizable. **Food Loops** is a headless CMS for selling your food online. Just use food loops dashboard to add your food and get ready-to-use API for fetching your menu and implementing guest user checkout.
+Easily customizable. **Food Loops** is an easy open-source Backend-as-a-Service (BaaS) that provides developers API needed for small restaurant/food businesses to go online. Just use food loops dashboard to add your food and get ready-to-use API for fetching your menu and implementing guest user checkout.
 
 Currently created using Node.js on the top of Express framework and TypeScript. For database, we've decided to go with MongoDB and and Mongoose as an ODM. Also using AWS S3 for image storage but you can update code to your own requirements.
 
